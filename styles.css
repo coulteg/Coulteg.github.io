@@ -61,6 +61,7 @@ body {
   height: 60rem;
   background: url(./resources/images/mountainheader.jpg) center center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .banner {
