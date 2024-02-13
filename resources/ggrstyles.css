@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "PT Sans", arial, sans-serif;
+  /* border: 1px solid red; */
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* header */
+
+.header {
+  width: 100%;
+  background: url("/resources/images/banner.jpg") top center;
+  background-size: cover;
+  height: 790px;
+}
+
+/* Topbar */
+
+.topbar {
+  width: 100%;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.topbar img {
+  width: 100%;
+  padding: 1em 0 0 1em;
+  display: inline;
+  box-sizing: border-box;
+  grid-column: 1 / 2;
+}
+
+/* Navbar */
+
+.navigation {
+  display: flex;
+  padding: 0 1em;
+  align-items: center;
+  gap: 5em;
+  box-sizing: border-box;
+  grid-column: 2 / 3;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+  font-size: 1.35em;
+}
+
+@media screen and (max-width: 870px) {
+  .topbar {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
+
+  .topbar img {
+    width: 40%;
+    display: block;
+    padding-bottom: 2rem;
+  }
+
+  .navigation {
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    gap: 1rem;
+  }
+
+  .navigation a {
+    width: 400px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+
+/* Banner */
+
+.banner {
+  display: grid;
+  color: whitesmoke;
+  padding-top: 80px;
+  padding-left: 2em;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.banner h1 {
+  font-size: 4em;
+  grid-column: 1 / 25;
+  padding-left: 0.5em;
+}
+
+.banner h4 {
+  font-size: 1.5em;
+  grid-row: 3;
+  grid-column: 3 / 25;
+  padding-left: 0.5em;
+}
+
+.button {
+  height: 50px;
+  line-height: 50px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  color: black;
+  grid-column: 7 / span 2;
+  grid-row: 4;
+  position: relative;
+}
+
+.button:hover {
+  background-color: grey;
+  color: whitesmoke;
+  padding: 0;
+}
+
+.button h5 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 900px) {
+  .banner {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .banner h1 {
+    width: 100%;
+    padding: 0.5em 0;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .banner h4 {
+    width: 100%;
+    padding: 0.5em 0;
+    text-align: center;
+  }
+
+  .button {
+    display: block;
+  }
+}
+/* Mission Statement*/
+
+#mission {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 75px;
+}
+
+#mission img {
+  width: 25%;
+}
+
+.missioncontent {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.missioncontent h2 {
+  padding: 0.5em;
+  font-size: 2em;
+}
+
+.missioncontent p {
+  width: 70%;
+  font-size: 1.1em;
+  padding: 0.5em;
+}
+
+@media screen and (max-width: 730px) {
+  #mission {
+    justify-content: center;
+    align-content: space-evenly;
+    padding: 1rem 0;
+  }
+
+  #mission img {
+    with: 100%;
+  }
+  .missioncontent {
+    width: 100%;
+  }
+}
+
+/* Races */
+
+#races {
+  width: 100%;
+}
+
+#races h1 {
+  text-align: center;
+  color: red;
+  text-decoration: underline;
+  font-size: 3em;
+  padding-bottom: 0.5em;
+  padding-top: 2em;
+}
+
+.racesflex {
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+#races img {
+  width: 30%;
+  padding: 1em;
+  /* max-height: 325px;
+  min-width: 500px; */
+}
+
+.racescontent {
+  width: 60%;
+  padding: 0;
+}
+
+.racescontent p {
+  padding: 1em 0;
+}
+
+.racescontent a {
+  color: red;
+}
+
+.racescontent h4 {
+  padding-bottom: 1em;
+}
+
+.racescontent li {
+  margin-left: 3em;
+  padding-bottom: 0.5em;
+}
+
+@media screen and (max-width: 980px) {
+  .racesflex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .racescontent {
+    width: 90%;
+  }
+
+  #races img {
+    width: 80%;
+    max-height: none;
+    min-width: none;
+  }
+
+  #races h1 {
+    padding: 1em;
+  }
+}
+
+/* Support */
+
+#support {
+  text-align: center;
+  padding-top: 150px;
+}
+
+#support h1 {
+  padding-bottom: 1em;
+}
+
+#support span {
+  padding: 0 0.5em;
+}
+
+#support a {
+  color: red;
+  font-size: 1.2em;
+}
+
+/* Images */
+
+#images {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  padding-top: 100px;
+}
+
+.imgwrapper {
+  display: flex;
+  background-color: black;
+  width: 255px;
+  height: 255px;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.imagewrapper img {
+  max-width: 255px;
+  max-height: 255px;
+  width: 100%;
+  height: 100%;
+  position: center;
+}
+
+/* Contact */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  padding-top: 100px;
+  height: 200px;
+  padding-bottom: 75px;
+  flex-wrap: wrap;
+}
+
+.contactleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: start;
+  width: 40%;
+}
+
+.contactleft h1 {
+  margin: 0 auto;
+  width: 100%;
+  color: red;
+  padding-bottom: 1em;
+  text-decoration: underline;
+}
+
+.buttonwrapper {
+  width: 150px;
+  height: 60px;
+  border: 1px solid red;
+  background-color: red;
+  /* position: relative; */
+}
+
+.buttonwrapper p {
+  /* position: absolute; */
+  line-height: 60px;
+  text-align: center;
+  color: whitesmoke;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.contactright {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: end;
+  justify-content: center;
+  width: 40%;
+}
+
+.contactright a {
+  color: red;
+  padding: 0.5em 2em;
+  align-self: center;
+}
+
+@media screen and (max-width: 800px) {
+  .contactleft {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  .contactright {
+    width: 70%;
+    align-content: center;
+    justify-content: center;
+  }
+}
