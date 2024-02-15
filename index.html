@@ -2,27 +2,40 @@
 
 <html>
   <head>
-    <link href="./styles.css" rel="stylesheet" />
     <title>Cascadia Web Design</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-  <div class="header">
+  <header>
     <div class="navwrapper">
       <div class="logo">
         <p>Cascadia Web Design</p>
       </div>
       <nav class="navbar">
-        <li><a href="./styleguide.html">HTML</a></li>
-        <li><a href="./teacozy.html">HTML + CSS</a></li>
-        <li><a href="./ggr.html">Responsive Design</a></li>
-        <!-- <a href="/javascript">JavaScript</a> -->
+        <a href="#aboutme" class="link">About Me</a>
+        <a href="#contact" class="link">Contact</a>
+        <ul class="dropdown">
+          <li><a class="link" id="projects">Projects</a></li>
+          <li>
+            <a href="./styleguide.html" class="dropdownlink">HTML</a>
+          </li>
+          <li>
+            <a href="./teacozy.html" class="dropdownlink">HTML + CSS</a>
+          </li>
+          <li>
+            <a href="./ggr.html" class="dropdownlink">Responsive Design</a>
+          </li>
+          <!-- <a href="/javascript">JavaScript</a> -->
+        </ul>
       </nav>
     </div>
-  </div>
-  <body>
+  </header>
+  <main>
     <div class="banner">
       <h1 class="slogan">Web Development based in the Pacific Northwest</h1>
     </div>
-    <div class="body"></div>
-  </body>
+    <section id="About Me"></section>
+    <section id="Contact"></section>
+  </main>
   <footer></footer>
 </html>
